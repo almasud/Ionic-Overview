@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Top 250 movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let movie of movies">
+      <img slot="start" width="150" height="150" src="{{movie.image}}" alt="{{movie.title}}">
+      <div style="margin: 4px;">
+        <ion-label>{{movie.title}}</ion-label>
+        <p>ImDb rating: {{movie.imDbRating}} <br><ion-badge>{{movie.imDbRatingCount}}</ion-badge></p>
+        <p>Year: {{movie.year}}</p>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
